@@ -1,4 +1,6 @@
-import { Form, Input, Button, Checkbox, Col } from 'antd';
+import { Form, Input, Button, Checkbox, Col, Row, Layout } from 'antd';
+
+const { Sider, Content } = Layout;
 
 const Login = () => {
   const onFinish = (values) => {
@@ -10,7 +12,8 @@ const Login = () => {
   };
 
   return (
-    <Col span={4}>
+    <Layout style={{height:"100vh"}}>
+    <Sider width={'50%'} theme={'light'}>
     <Form
       name="basic"
       labelCol={{
@@ -74,7 +77,10 @@ const Login = () => {
         </Button>
       </Form.Item>
     </Form>
-    </Col>
+    </Sider>
+    <Content span={12} style={{backgroundColor: 'blue'}}>
+    </Content>
+    </Layout>
   );
 };
 
