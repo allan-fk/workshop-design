@@ -1,4 +1,4 @@
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, Col } from 'antd';
 
 const Login = () => {
   const onFinish = (values) => {
@@ -10,6 +10,7 @@ const Login = () => {
   };
 
   return (
+    <Col span={4}>
     <Form
       name="basic"
       labelCol={{
@@ -73,6 +74,7 @@ const Login = () => {
         </Button>
       </Form.Item>
     </Form>
+    </Col>
   );
 };
 
