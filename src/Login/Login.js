@@ -1,4 +1,7 @@
 import { Form, Input, Button, Checkbox, Col, Row, Layout, Typography } from 'antd';
+import {
+  GoogleOutlined
+} from '@ant-design/icons';
 
 const { Title, Text } = Typography;
 
@@ -16,7 +19,7 @@ const Login = () => {
   return (
     <Layout style={{ height: "100vh" }}>
       <Sider width={'50%'} theme={'light'} style={{ zIndex: 2 }}>
-        <Row justify="space-around" align="middle">
+        <Row justify="space-around" align="middle" style={{height: "100vh"}}>
           <Col span={12}>
             <Row style={{margin: "40px 0"}}>
               <Col span={24}>
@@ -30,7 +33,7 @@ const Login = () => {
                 span: 8,
               }}
               wrapperCol={{
-                span: 16,
+                span: 24,
               }}
               initialValues={{
                 remember: true,
@@ -70,7 +73,6 @@ const Login = () => {
                 name="remember"
                 valuePropName="checked"
                 wrapperCol={{
-                  offset: 8,
                   span: 16,
                 }}
               >
@@ -79,21 +81,22 @@ const Login = () => {
 
               <Form.Item
                 wrapperCol={{
-                  offset: 8,
-                  span: 16,
+                  span: 25,
                 }}
               >
-                <Button type="primary" htmlType="submit">
-                  Submit
+                <Button type="primary" htmlType="submit" size='large' style={{width: "100%", margin: "3% 0"}}>
+                  Sign In
+                </Button>
+                <Button htmlType="submit" size='large' style={{width: "100%"}}>
+                <GoogleOutlined /> Sign In with Google
                 </Button>
               </Form.Item>
             </Form>
           </Col>
         </Row>
       </Sider>
-      {/* <Content span={12} style={{backgroundImage: `url(${"https://i1.wp.com/images.frandroid.com/wp-content/uploads/2021/06/windows-11-wallpaper-fond-ecran-4.jpg?ssl=1"})` }}> */}
       <Content span={12} style={{ backgroundColor: 'blue' }}>
-        <img src={"https://i1.wp.com/images.frandroid.com/wp-content/uploads/2021/06/windows-11-wallpaper-fond-ecran-4.jpg?ssl=1"} alt="Logo" style={{ zIndex: 1, position: "relative", left: "-20%" }} />;
+        <img src={"https://i1.wp.com/images.frandroid.com/wp-content/uploads/2021/06/windows-11-wallpaper-fond-ecran-4.jpg?ssl=1"} alt="Logo" style={{ zIndex: 1, position: "relative", left: "-50%", height: "100vh" }} />
       </Content>
     </Layout>
   );
