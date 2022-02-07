@@ -63,40 +63,6 @@ const SignIn = () => {
           autoComplete="off"
           layout="vertical"
         >
-
-          <Form.Item
-            label="Firstname"
-            name="firstname"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your firstname !',
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="Lastname"
-            name="lastname"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your lastname !',
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item name="birthday" label="Birthday" rules={[
-            {
-              type: 'object',
-              required: true,
-              message: 'Please select your birthday !',
-            },
-          ]}>
-            <DatePicker />
-          </Form.Item>
           <Form.Item
             label="Username"
             name="username"
@@ -111,6 +77,18 @@ const SignIn = () => {
           </Form.Item>
 
           <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+              {
+                required: true,
+                message: 'Please input your email !',
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
             label="Password"
             name="password"
             rules={[
@@ -122,6 +100,16 @@ const SignIn = () => {
           >
             <Input.Password />
           </Form.Item>
+          <Form.Item name="birthday" label="Birthday" rules={[
+            {
+              type: 'object',
+              required: true,
+              message: 'Please select your birthday !',
+            },
+          ]}>
+            <DatePicker />
+          </Form.Item>
+          
           <Form.Item
             name="phone"
             label="Phone Number"
@@ -139,18 +127,7 @@ const SignIn = () => {
               }}
             />
           </Form.Item>
-          <Form.Item
-            label="Email"
-            name="email"
-            rules={[
-              {
-                required: true,
-                message: 'Please input your email !',
-              },
-            ]}
-          >
-            <Input />
-          </Form.Item>
+          
 
           <Form.Item
             wrapperCol={{
